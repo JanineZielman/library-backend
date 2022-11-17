@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "person_roles",
+  "info": {
+    "singularName": "person-role",
+    "pluralName": "person-roles",
+    "displayName": "Person Role",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "slug": {
+      "type": "uid",
+      "targetField": "role"
+    },
+    "role": {
+      "type": "string"
+    }
+  }
+}

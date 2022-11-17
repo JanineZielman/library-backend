@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "organisation_roles",
+  "info": {
+    "singularName": "organisation-role",
+    "pluralName": "organisation-roles",
+    "displayName": "Organisation Role"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "slug": {
+      "type": "uid",
+      "targetField": "role"
+    },
+    "role": {
+      "type": "string"
+    }
+  }
+}

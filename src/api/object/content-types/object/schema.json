@@ -1,0 +1,71 @@
+{
+  "kind": "collectionType",
+  "collectionName": "objects",
+  "info": {
+    "singularName": "object",
+    "pluralName": "objects",
+    "displayName": "Object",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "object_id": {
+      "type": "uid"
+    },
+    "title": {
+      "type": "string"
+    },
+    "bindings": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::binding.binding",
+      "inversedBy": "objects"
+    },
+    "types": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::type.type",
+      "inversedBy": "objects"
+    },
+    "year": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::year.year",
+      "inversedBy": "objects"
+    },
+    "Relations": {
+      "type": "dynamiczone",
+      "components": [
+        "organisation.organisation",
+        "person.person"
+      ]
+    },
+    "size": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::size.size",
+      "inversedBy": "objects"
+    },
+    "language": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::language.language",
+      "inversedBy": "objects"
+    },
+    "colorcode1": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::colorcode.colorcode",
+      "inversedBy": "objects"
+    },
+    "colorcode2": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::colorcode.colorcode",
+      "inversedBy": "objects"
+    }
+  }
+}
