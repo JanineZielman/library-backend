@@ -2,19 +2,21 @@
   "collectionName": "components_person_people",
   "info": {
     "displayName": "Person",
-    "icon": "address-book"
+    "icon": "address-book",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "person": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::person.person"
-    },
     "person_role": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::person-role.person-role"
+    },
+    "first_name": {
+      "type": "string"
+    },
+    "last_name": {
+      "type": "string"
     }
   }
 }

@@ -4,7 +4,8 @@
   "info": {
     "singularName": "type",
     "pluralName": "types",
-    "displayName": "Type"
+    "displayName": "07_Type",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -20,9 +21,9 @@
     },
     "objects": {
       "type": "relation",
-      "relation": "manyToMany",
+      "relation": "oneToMany",
       "target": "api::object.object",
-      "mappedBy": "types"
+      "mappedBy": "type"
     }
   }
 }

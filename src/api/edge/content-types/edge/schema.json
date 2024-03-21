@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "edges",
+  "info": {
+    "singularName": "edge",
+    "pluralName": "edges",
+    "displayName": "05_Edge",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "slug": {
+      "type": "uid",
+      "targetField": "edge"
+    },
+    "edge": {
+      "type": "string"
+    },
+    "objects": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::object.object",
+      "mappedBy": "edges"
+    }
+  }
+}

@@ -2,19 +2,18 @@
   "collectionName": "components_organisation_organisations",
   "info": {
     "displayName": "Organisation",
-    "icon": "address-card"
+    "icon": "address-card",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "organisation": {
+    "person_role": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::organisation.organisation"
+      "target": "api::person-role.person-role"
     },
-    "organisation_role": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::organisation-role.organisation-role"
+    "organisation": {
+      "type": "string"
     }
   }
 }

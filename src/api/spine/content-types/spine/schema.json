@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "spines",
+  "info": {
+    "singularName": "spine",
+    "pluralName": "spines",
+    "displayName": "03_Spine",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "slug": {
+      "type": "uid",
+      "targetField": "spine"
+    },
+    "spine": {
+      "type": "string"
+    },
+    "objects": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::object.object",
+      "mappedBy": "spine_types"
+    }
+  }
+}

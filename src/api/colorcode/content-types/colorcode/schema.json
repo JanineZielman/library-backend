@@ -4,7 +4,8 @@
   "info": {
     "singularName": "colorcode",
     "pluralName": "colorcodes",
-    "displayName": "Colorcode"
+    "displayName": "06_Colorcode",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true

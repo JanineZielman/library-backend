@@ -4,7 +4,8 @@
   "info": {
     "singularName": "language",
     "pluralName": "languages",
-    "displayName": "Language"
+    "displayName": "08_Language",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -20,9 +21,9 @@
     },
     "objects": {
       "type": "relation",
-      "relation": "oneToMany",
+      "relation": "manyToMany",
       "target": "api::object.object",
-      "mappedBy": "language"
+      "mappedBy": "languages"
     }
   }
 }

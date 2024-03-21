@@ -4,7 +4,7 @@
   "info": {
     "singularName": "object",
     "pluralName": "objects",
-    "displayName": "Object",
+    "displayName": "00_Object",
     "description": ""
   },
   "options": {
@@ -24,16 +24,10 @@
       "target": "api::binding.binding",
       "inversedBy": "objects"
     },
-    "types": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::type.type",
-      "inversedBy": "objects"
-    },
-    "year": {
+    "type": {
       "type": "relation",
       "relation": "manyToOne",
-      "target": "api::year.year",
+      "target": "api::type.type",
       "inversedBy": "objects"
     },
     "Relations": {
@@ -43,15 +37,9 @@
         "person.person"
       ]
     },
-    "size": {
+    "languages": {
       "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::size.size",
-      "inversedBy": "objects"
-    },
-    "language": {
-      "type": "relation",
-      "relation": "manyToOne",
+      "relation": "manyToMany",
       "target": "api::language.language",
       "inversedBy": "objects"
     },
@@ -66,6 +54,98 @@
       "relation": "manyToOne",
       "target": "api::colorcode.colorcode",
       "inversedBy": "objects"
+    },
+    "cover_image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "back_cover": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "colophon": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "content": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "width": {
+      "type": "float"
+    },
+    "height": {
+      "type": "float"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "covers": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::cover.cover",
+      "inversedBy": "objects"
+    },
+    "edges": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::edge.edge",
+      "inversedBy": "objects"
+    },
+    "insides": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::inside.inside",
+      "inversedBy": "objects"
+    },
+    "spine_types": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::spine.spine",
+      "inversedBy": "objects"
+    },
+    "year": {
+      "type": "biginteger"
+    },
+    "isbn_number": {
+      "type": "string"
+    },
+    "special_case": {
+      "type": "text"
+    },
+    "sets": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::set.set",
+      "mappedBy": "objects"
     }
   }
 }

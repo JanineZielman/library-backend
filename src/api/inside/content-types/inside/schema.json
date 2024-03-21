@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "insides",
+  "info": {
+    "singularName": "inside",
+    "pluralName": "insides",
+    "displayName": "04_Inside",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "slug": {
+      "type": "uid",
+      "targetField": "inside"
+    },
+    "inside": {
+      "type": "string"
+    },
+    "objects": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::object.object",
+      "mappedBy": "insides"
+    }
+  }
+}
