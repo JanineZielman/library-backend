@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "colorcodes",
+  "info": {
+    "singularName": "colorcode",
+    "pluralName": "colorcodes",
+    "displayName": "Colorcode"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "slug": {
+      "type": "uid",
+      "targetField": "colorcode"
+    },
+    "colorcode": {
+      "type": "string"
+    },
+    "objects": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::object.object",
+      "mappedBy": "colorcode2"
+    }
+  }
+}
